@@ -389,9 +389,11 @@ Ejemplo de un archivo .gitignore:
 
 ## Crear un nuevo repositorio con la línea de comandos
 
+```ssh
 echo "# Manual-Gits" >> README.md
 git init
 git add README.md
 git commit -m "Inicio del manual"
 git remote add origin https://github.com/amafco/Manual-Gits.git
 git push -u origin master
+```
