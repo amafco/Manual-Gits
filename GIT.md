@@ -78,6 +78,17 @@ clonamos el repositorio a un directorio con otro nombre
 	git clone <url> directorio-git
 ```
 
+## GIT STATUS
+
+Muestra el estado del repositorio
+```ssh
+	git status
+```
+Muestra el estado del repositorio de forma abreviada
+```ssh
+	git status -s
+```
+
 ## GIT ADD
 
 Añadimos todos los archivos para el commit
@@ -90,6 +101,7 @@ Añadimos el archivo para el commit
 ```
 Añadimos todos los archivos para el commit omitiendo los nuevos
 ```ssh
+	git add -A
 	git add --all 
 ```
 Añadimos todos los archivos con la extensión especificada
@@ -297,10 +309,6 @@ Muestra las archivos con cambios en un directorio
 
 ## OTROS COMANDOS
 
-Lista un estado actual del repositorio con lista de archivos modificados o agregados
-```ssh
-	git status
-```
 Quita del HEAD un archivo y le pone el estado de no trabajado
 ```ssh
 	git checkout -- <file>
@@ -329,21 +337,53 @@ Borrar un archivo del repositorio
 ```ssh
 	git rm <archivo> 
 ```
+Modificar un archivo del repositorio
+```ssh
+	git mv <archivo_original> <archivo_modificado>  
+```
 
 ## Fork
 
 Descargar remote de un fork
-```
+```ssh
 	git remote add upstream <url>
 ```
 
 Merge con master de un fork
-```
+```ssh
 	git fetch upstream
 	git merge upstream/master
 ```
 
+## Ignorar Archivos
+Si tienes algún archivo que no quieres que Git añada o aparezca como no rastreado
 
+Crear un archivo llamado .gitignore que liste los patrones a considerar
+```ssh
+	$ cat .gitignore
+```
+
+Ejemplo de un archivo .gitignore:
+```ssh
+	# ignora los archivos terminados en .a
+	*.a
+
+	# pero no lib.a, aun cuando había ignorado los archivos terminados en .a en la linea
+	anterior
+	!lib.a
+
+	# ignora unicamente el archivo TODO de la raiz, no subdir/TODO
+	/TODO
+
+	# ignora todos los archivos del directorio build/
+	build/
+
+	# ignora doc/notes.txt, pero este no doc/server/arch.txt
+	doc/*.txt
+
+	# ignora todos los archivos .txt el directorio doc/
+	doc/**/*.txt
+```
 
 # Ejemplos
 
