@@ -58,6 +58,10 @@ Hacemos el primer commit
 ```ssh
 	git commit -m "Texto que identifique por que se hizo el commit"
 ```
+Añadir repositorio remoto
+```ssh
+	git remote add origin <url>
+```
 subimos al repositorio
 ```ssh
 	git push origin master
@@ -338,3 +342,16 @@ Merge con master de un fork
 	git fetch upstream
 	git merge upstream/master
 ```
+
+
+
+# Ejemplos
+
+## Crear un nuevo repositorio con la línea de comandos
+
+echo "# Manual-Gits" >> README.md
+git init
+git add README.md
+git commit -m "Inicio del manual"
+git remote add origin https://github.com/amafco/Manual-Gits.git
+git push -u origin master
