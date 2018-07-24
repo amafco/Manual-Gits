@@ -1,4 +1,4 @@
-#Comandos de GIT
+# Comandos de GIT
 
 ## Configuración Básica
 
@@ -69,13 +69,13 @@ subimos al repositorio
 
 ## GIT CLONE
 
-Clonamos el repositorio de github o bitbucket
+Clonamos un repositorio
 ```ssh
 	git clone <url>
 ```
-Clonamos el repositorio de github o bitbucket ?????
+clonamos el repositorio a un directorio con otro nombre 
 ```ssh
-	git clone <url> git-demo
+	git clone <url> directorio-git
 ```
 
 ## GIT ADD
