@@ -8,7 +8,7 @@ Configurar Nombre de usuario
 ```
 Configurar correo electrónico
 ```ssh	
-	git config --global user.email dasdo1@gmail.com
+	git config --global user.email "dasdo1@gmail.com"
 ```
 Editor de texto por defecto
 ```ssh	
